@@ -134,6 +134,16 @@ namespace SiteRepublicas.Controllers
             return View(republicas);
         }
 
+        public async Task<IActionResult> Filter(string filter)
+        {
+
+           var repulicas = await _context.Republicas.ToListAsync();
+           var teste = repulicas.Where(rep => rep.Tipo == filter);
+
+            return View(teste);
+        }
+
+
         // POST: Republicas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

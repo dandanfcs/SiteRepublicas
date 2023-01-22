@@ -9,8 +9,8 @@ using SiteRepublicas.DataContext;
 namespace SiteRepublicas.Migrations
 {
     [DbContext(typeof(ContextDb))]
-    [Migration("20221109185727_init")]
-    partial class init
+    [Migration("20230122161639_contat")]
+    partial class contat
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -36,6 +36,9 @@ namespace SiteRepublicas.Migrations
                     b.Property<int>("Cozinha")
                         .HasColumnType("int");
 
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Garagem")
                         .HasColumnType("int");
 
@@ -56,6 +59,9 @@ namespace SiteRepublicas.Migrations
 
                     b.Property<int>("Salas")
                         .HasColumnType("int");
+
+                    b.Property<string>("Telefone")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Tipo")
                         .HasColumnType("nvarchar(max)");

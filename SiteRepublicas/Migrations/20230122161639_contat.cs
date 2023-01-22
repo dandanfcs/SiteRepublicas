@@ -2,7 +2,7 @@
 
 namespace SiteRepublicas.Migrations
 {
-    public partial class init : Migration
+    public partial class contat : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -23,7 +23,9 @@ namespace SiteRepublicas.Migrations
                     Tipo = table.Column<string>(nullable: true),
                     Rua = table.Column<string>(nullable: true),
                     Numero = table.Column<string>(nullable: true),
-                    Bairro = table.Column<string>(nullable: true)
+                    Bairro = table.Column<string>(nullable: true),
+                    Telefone = table.Column<string>(nullable: true),
+                    Email = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

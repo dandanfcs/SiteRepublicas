@@ -34,6 +34,9 @@ namespace SiteRepublicas.Migrations
                     b.Property<int>("Cozinha")
                         .HasColumnType("int");
 
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Garagem")
                         .HasColumnType("int");
 
@@ -54,6 +57,9 @@ namespace SiteRepublicas.Migrations
 
                     b.Property<int>("Salas")
                         .HasColumnType("int");
+
+                    b.Property<string>("Telefone")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Tipo")
                         .HasColumnType("nvarchar(max)");

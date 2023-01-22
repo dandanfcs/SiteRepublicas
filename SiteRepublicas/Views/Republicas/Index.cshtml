@@ -1,17 +1,17 @@
 ﻿@model IEnumerable<SiteRepublicas.Models.Republicas>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "MyRep";
 }
 
-<h1>Index</h1>
+<h1>MyRep</h1>
 
 <p>
     <a class="btn btn-info" asp-action="Create">Adicionar Republica</a>
 </p>
 <table class="table">
     <thead>
-        <tr>
+        <tr >
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
@@ -20,7 +20,7 @@
             </th>
            
             <th>
-                @Html.DisplayNameFor(model => model.Numero_de_Vagas)
+               Vagas Disponiveis
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Garagem)
@@ -66,9 +66,9 @@
               Bairro:  @Html.DisplayFor(modelItem => item.Bairro)
             </td>
             <td>
-                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a  class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a  class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a class="btn btn-info" asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
             </td>
         </tr>
 }
